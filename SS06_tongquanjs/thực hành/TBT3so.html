@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số Học</title>
+</head>
+<body>
+    <table>
+        <h2 style="color:mediumvioletred">TRUNG BÌNH TỔNG 3 SỐ NHẬP TỪ BÀN PHÍM</h2>
+        <tr>
+            <td style="color:mediumaquamarine">Nhập a:</td>
+            <td>
+                <input type="number" id="SoA">
+            </td>
+        </tr>
+        <tr>
+            <td style="color:mediumaquamarine">Nhập b:</td>
+            <td>
+                <input type="number" id="SoB">
+            </td>
+        </tr>
+        <tr>
+            <td style="color:mediumaquamarine">Nhập c:</td>
+            <td>
+                <input type="number"  id="SoC">
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <button style="color:mediumorchid" onclick="Add()">Ave</button>
+            </td>
+            <td>
+                <span id="result"></span>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function Add(){
+            let a=document.getElementById("SoA").value;
+            let b=document.getElementById("SoB").value;
+            let c=document.getElementById("SoC").value;
+            let Sum=parseInt(a)+ parseInt(b)+ parseInt(c);
+            let Ave=parseInt(Sum)/3;
+            document.getElementById("result").innerHTML=Ave;
+        }
+    </script>
+</body>
+</html>
