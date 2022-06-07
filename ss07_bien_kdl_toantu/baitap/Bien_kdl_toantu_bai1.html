@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Vật lý<input type="number" id="vl"></td>
+    </tr>
+    <tr>
+        <td>Hoá học<input type="number" id="hh"></td>
+    </tr>
+    <tr>
+        <td>Sinh học<input type="number" id="sh"></td>
+    </tr>
+    <tr>
+        <td id="Tổng">
+            <button onclick="total()">Tổng</button>
+        </td>
+        <td><input id="Result" type="text"></td>
+    </tr>
+    <tr>
+        <td id="Trung bình">
+            <button onclick="average()">Trung bình</button>
+        </td>
+        <td><input id="Result2" type="text"></td>
+    </tr>
+</table>
+<script>
+    function total() {
+        let physic = parseInt(document.getElementById('vl').value);
+        let chemistry = parseInt(document.getElementById('hh').value);
+        let biology = parseInt(document.getElementById('sh').value);
+        let total = physic + chemistry + biology
+        document.getElementById("Result").value = total;
+
+    }
+
+    function average() {
+        let physic = parseInt(document.getElementById('vl').value);
+        let chemistry = parseInt(document.getElementById('hh').value);
+        let biology = parseInt(document.getElementById('sh').value);
+        let total = physic + chemistry + biology
+        let average = total / 3
+        document.getElementById("Result2").value = average;
+    }
+</script>
+
+</script>
+</body>
+</html>

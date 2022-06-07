@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+
+<p><b>Caculator</b></p>
+
+<input id="numberA" type="number">
+<input id="numberB" type="number">
+<br>
+
+<button id="add" onclick="Add()">Cộng(+)</button>
+<button id="sub" onclick="Sub()">Trừ(-)</button>
+<button id="mul" onclick="Mul()">Nhân(X)</button>
+<button id="div" onclick="Div()">Chia(/)</button>
+<br>
+<p><b>Result</b></p>
+<div id="result"></div>
+</body>
+<script>
+    function Add() {
+        let numA = parseFloat(document.getElementById("numberA").value);
+        let numB = parseFloat(document.getElementById("numberB").value);
+        let add = numA + numB
+        document.getElementById("result").innerHTML =add;
+    }
+
+    function Sub() {
+        let numA = parseFloat(document.getElementById("numberA").value);
+        let numB = parseFloat(document.getElementById("numberB").value);
+        let sub = numA - numB
+        document.getElementById("result").innerHTML =sub;
+    }
+
+    function Mul() {
+        let numA = parseFloat(document.getElementById("numberA").value);
+        let numB = parseFloat(document.getElementById("numberB").value);
+        let mul = numA * numB
+        document.getElementById("result").innerHTML =mul;
+    }
+
+    function Div() {
+        let numA = parseFloat(document.getElementById("numberA").value);
+        let numB = parseFloat(document.getElementById("numberB").value);
+        let div = numA / numB
+        document.getElementById("result").innerHTML =div;
+    }
+</script>
+</html>

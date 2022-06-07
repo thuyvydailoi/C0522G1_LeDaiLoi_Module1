@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số Học</title>
+</head>
+<body>
+    <table>
+        <h2 style="color:mediumvioletred">ĐIỂM TRUNG BÌNH CỦA HỌC SINH</h2>
+        <tr>
+            <td style="color:mediumaquamarine">Nhập điểm Vật Lý:</td>
+            <td>
+                <input type="number" id="DVL">
+            </td>
+        </tr>
+        <tr>
+            <td style="color:mediumaquamarine">Nhập điểm Hóa Học:</td>
+            <td>
+                <input type="number" id="DHH">
+            </td>
+        </tr>
+        <tr>
+            <td style="color:mediumaquamarine">Nhập điểm Sinh học:</td>
+            <td>
+            <input type="number"  id="DSH">
+                </td>
+        </tr>
+        <tr>
+            <td >
+                <button style="color:mediumorchid" onclick="Add()">Ave</button>
+            </td>
+            <td>
+                <span id="result"></span>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function Add(){
+            let a=document.getElementById("DVL").value;
+            let b=document.getElementById("DHH").value;
+            let c=document.getElementById("DSH").value;
+            let Sum=parseInt(a)+ parseInt(b)+ parseInt(c);
+            let Ave=parseInt(Sum)/3;
+            document.getElementById("result").innerHTML=Ave;
+    }
+</script>
+</body>
+</html>
