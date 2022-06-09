@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberA = prompt("Nhập số A: ");
+    let numberB = prompt("Nhập số B: ");
+    let numberC = prompt("Nhập số C: ");
+    let Delta = parseFloat(Math.pow(numberB,2)-(4 * numberA * numberC));
+    if(numberA != 0 && Delta < 0){
+        alert('Phương Trình vô nghiệm');
+    } else if( Delta = 0 ){
+        alert('Phương trình có nghiệm kép');
+    } else if( Delta>0 ) {
+        alert('Phương trình có 2 nghiệm riêng biệt');
+    } else{
+        alert("Nhập lại các giá trị số !");
+    }
+</script>
+</body>
+</html>

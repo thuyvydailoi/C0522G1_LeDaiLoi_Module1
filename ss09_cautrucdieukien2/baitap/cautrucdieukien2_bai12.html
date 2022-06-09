@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt("Nhập số tiền: "));
+    let month = parseInt(prompt("Nhập số  tháng: "));
+    if( 0 < month && month <= 6 ){
+        alert('Lãi suất vay dưới 6 tháng là 0.5%')
+        alert(money * 0.5/ month);
+    } else {
+        alert('Lãi suất vay trên 6 tháng là 0,8%')
+        alert(money * 0.8 / month);
+    }
+</script>
+</body>
+</html>
