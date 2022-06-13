@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="game()">Bắt đầu</button>
+<script>
+    function game() {
+        let maxNumber = parseInt(prompt("Số bạn đoán trong khoảng lớn nhất là bao nhiêu? "));
+        let minNumber = parseInt(prompt("Số bạn đoán trong khoảng nhỏ nhất là bao nhiêu? "));
+        let randomNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+        let count = 0;
+        let number;
+        do {
+            number = parseInt(prompt("Nhập số bạn đoán: "));
+            count++;
+            if (count > 3) {
+                alert("Bạn đã hết 3 lượt đoán!");
+                break;
+            } else if (number > randomNumber) {
+                alert("Số bạn nhập lớn hơn số cần đoán!");
+            } else if (number < randomNumber) {
+                alert("Số bạn nhập nhỏ hơn số cần đoán!");
+            } else {
+                alert("Bạn đã đoán đúng !");
+            }
+        } while (number != randomNumber);
+    }
+</script>
+</body>
+</html>

@@ -7,13 +7,13 @@
 <body>
 <script>
     let consumption = parseInt(prompt("Nhập số điện tiêu thụ: "));
-    let rank0 = consumption <0;
-    let rank1 = consumption <=50;
-    let rank2 = consumption <=100;
-    let rank3 = consumption <=200;
-    let rank4 = consumption <=300;
-    let rank5 = consumption <=400;
-    switch(true){
+    let rank0 = consumption < 0;
+    let rank1 = consumption <= 50;
+    let rank2 = consumption <= 100;
+    let rank3 = consumption <= 200;
+    let rank4 = consumption <= 300;
+    let rank5 = consumption <= 400;
+    switch (true) {
         case rank0:
             alert("Input again ! ")
             break;
@@ -32,8 +32,8 @@
         case rank5:
             alert(consumption * 2834);
             break;
-            default:
-                    alert('Input again ! ');
+        default:
+            alert('Input again ! ');
     }
 </script>
 </body>

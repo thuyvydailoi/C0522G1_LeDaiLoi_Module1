@@ -36,18 +36,18 @@
     function thanhTien() {
 
         var sotien = document.getElementById('inputTien').value;
-        var tiencanDoi=sotien;
+        var tiencanDoi = sotien;
         var tien1 = document.getElementById('from').value;
         var tien2 = document.getElementById('to').value;
-        if (tien1 !== tien2){
-            if (tien1 === "VND"){
+        if (tien1 !== tien2) {
+            if (tien1 === "VND") {
                 sotien = sotien / 23000;
             }
-            if(tien1 === "USD"){
+            if (tien1 === "USD") {
                 sotien = sotien * 23000;
             }
         }
-        document.getElementById('show').innerHTML = tiencanDoi+' '+ tien1 +' = '+ sotien + ' '+ tien2 ;
+        document.getElementById('show').innerHTML = tiencanDoi + ' ' + tien1 + ' = ' + sotien + ' ' + tien2;
     }
 </script>
 <p id="show"></p>

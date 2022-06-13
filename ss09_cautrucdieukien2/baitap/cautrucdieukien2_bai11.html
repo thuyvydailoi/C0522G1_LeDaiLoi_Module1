@@ -7,37 +7,37 @@
 <body>
 <script>
     let income = parseFloat(prompt("Nhập mức thu nhập: "));
-    let rank0 = income <0
+    let rank0 = income < 0
     let rank1 = income <= 5000000;
     let rank2 = income <= 10000000;
     let rank3 = income <= 18000000;
     let rank4 = income <= 32000000;
     let rank5 = income <= 52000000;
     let rank6 = income <= 80000000;
-    switch(true){
+    switch (true) {
         case rank0:
-            alert ( "Input again ! " );
+            alert("Input again ! ");
             break;
         case rank1:
-            alert ( income * 0.05);
+            alert(income * 0.05);
             break;
         case rank2:
-            alert ( income * 0.1 );
+            alert(income * 0.1);
             break;
         case rank3:
-            alert ( income * 0.15 );
+            alert(income * 0.15);
             break;
         case rank4:
-            alert ( income * 0.20 );
+            alert(income * 0.20);
             break;
         case rank5:
-            alert ( income * 0.25 );
+            alert(income * 0.25);
             break;
         case rank6:
-            alert ( income * 0.3 );
+            alert(income * 0.3);
             break;
-            default:
-                alert ( income *0/35);
+        default:
+            alert(income * 0 / 35);
 
     }
 </script>

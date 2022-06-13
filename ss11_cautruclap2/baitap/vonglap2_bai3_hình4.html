@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<h2>Hình 4:</h2>
+<script>
+    let tamgiacn, i, j;
+    tamgiacn = "<table>";
+    for (i = 1; i <= 5; i++) {
+        tamgiacn = tamgiacn + "<tr>";
+        for (j = 1; j <= 5; j++) {
+            if (j < i) {
+                tamgiacn = tamgiacn + "<td>" + "</td>";
+            } else {
+                tamgiacn += "<td>" + "*" + "</td>";
+            }
+        }
+        tamgiacn = tamgiacn + "</tr>";
+    }
+    tamgiacn = tamgiacn + "</table>";
+    document.write(tamgiacn);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br><h2>Hình 3:</h2>
+<script>
+    let tamgiac, i, j;
+    tamgiac = "<table>";
+    for (i = 1; i <= 5; i++) {
+        tamgiac = tamgiac + "<tr>";
+        for (j = 1; j <= 5; j++) {
+            if (j <= 6 - i)
+                tamgiac = tamgiac + "<td>" + "* " + "</td>";
+        }
+        tamgiac = tamgiac + "</tr>";
+    }
+    tamgiac = tamgiac + "</table>";
+    document.write(tamgiac);
+</script>
+</body>
+</html>

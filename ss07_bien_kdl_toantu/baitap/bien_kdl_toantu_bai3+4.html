@@ -6,33 +6,33 @@
 </head>
 <body>
 <html>
-    <table>
-        <tr>
-            <td>Nhập bán kính<input type="number" id="bk"></td>
-        </tr>
-        <tr>
-            <td>
-                <button onclick="perimeter()">Diện tích</button>
-                <input id="dt"></td>
-        </tr>
-        <tr>
-            <td>
-                <button onclick="area()">Chu vi</button>
-                <input id="cv"></td>
-        </tr>
-    </table>
-    <script>
-        function perimeter() {
-            let radius = document.getElementById("bk").value;
-            let perimeter = parseFloat(radius)*2*Math.PI;
-            document.getElementById("dt").value = perimeter;
-        }
+<table>
+    <tr>
+        <td>Nhập bán kính<input type="number" id="bk"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="perimeter()">Diện tích</button>
+            <input id="dt"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="area()">Chu vi</button>
+            <input id="cv"></td>
+    </tr>
+</table>
+<script>
+    function perimeter() {
+        let radius = document.getElementById("bk").value;
+        let perimeter = parseFloat(radius) * 2 * Math.PI;
+        document.getElementById("dt").value = perimeter;
+    }
 
-        function area() {
-            let radius = document.getElementById("bk").value;
-            let area = parseFloat(radius*radius) * Math.PI;
-            document.getElementById("cv").value = area;
-        }
-    </script>
+    function area() {
+        let radius = document.getElementById("bk").value;
+        let area = parseFloat(radius * radius) * Math.PI;
+        document.getElementById("cv").value = area;
+    }
+</script>
 </html>
 </body>
