@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<label for="str">Input text: </label>
+<input type="text" name="" id="str">
+<button onclick="trans()">Translate</button>
+<p id="result"></p>
+<script>
+    function trans() {
+        let arr_vie = ["anh ấy", "cô ấy", "con trai", "con gái", "bố", "mẹ"];
+        let arr_eng = ["he", "she", "son", "daughter", "daddy", "mom"];
+        let string = document.getElementById("str").value;
+        let index_eng = 0;
+        let result = "";
+        for (let i = 0; i < arr_eng.length; i++) {
+            if (string === arr_eng[i]) {
+                index_eng = i;
+                for (let j = 0; j < arr_vie.length; j++) {
+                    if (index_eng === j) {
+                        result = arr_vie[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let str1 = prompt("Input text: ");
+    // let arrayStr = str1.split("");
+    // for (let i = 0; i < arrayStr.length; i++) {
+    //     if (arrayStr[i] === "-") {
+    //         arrayStr[i] = "_";
+    //     }
+    // }
+    // document.write("Array after change: " + arrayStr.join(""));
+    let number = parseInt(prompt("Nhap so phan tu mang: "));
+    let array = [];
+    for (let i = 0; i < number; i++) {
+        array[i] = prompt("Nhap phan tu thu: " + i);
+    }
+    for (let j = 0; j < array.length; j++) {
+        if (array[j] === "-") {
+            array[j] = "_";
+        }
+    }
+    document.write("Array after change: " + array);
+</script>
+</body>
+</html>

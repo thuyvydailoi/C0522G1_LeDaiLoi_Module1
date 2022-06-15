@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [-1, 10, 20, 22, 34, 100, 200, 1000, 203, 102, 123];
+    let max = number[0];
+    let maxindex = 0;
+    for (let i = 1; i < number.length; i++) {
+        if (number[i] > max) {
+            max = number[i];
+            maxindex = i;
+        }
+    }
+    document.write("Max is : " + max + "<br>");
+    document.write("Max of index is : " + maxindex);
+</script>
+</body>
+</html>

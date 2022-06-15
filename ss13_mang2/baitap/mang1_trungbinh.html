@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [10, 20, 15, 40, 53, 200, 123, 312, 201, 230];
+    let max = number[0];
+    let sum = 0;
+    let average = 0;
+    for (let i = 0; i < number.length; i++) {
+        sum += number[i];
+        average = sum / number.length;
+        if (number[i] > max) {
+            max = number[i];
+
+        }
+    }
+    document.write("Number max of array : " + max + "<br>");
+    document.write("Average of array : " + average);
+
+</script>
+</body>
+</html>

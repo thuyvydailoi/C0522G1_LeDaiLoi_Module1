@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["a", "b", "c", "f", "g", "s", 3, 100, 23, 45, 123, -3];
+    document.write("Size of arry: " + arr.length + "<br>");
+    count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0 || arr[i] % arr[i] === 0) {
+            count++;
+        }
+    }
+    document.write("Number: " + count);
+</script>
+</body>
+</html>
