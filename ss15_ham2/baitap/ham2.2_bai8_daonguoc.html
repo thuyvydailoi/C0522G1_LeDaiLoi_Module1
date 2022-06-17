@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reverse(array) {
+        let first = 0;
+        let last = array.length - 1;
+        while (first < last) {
+            let stemp = array[first];
+            array[first] = array[last];
+            array[last] = stemp;
+            first++;
+            last--;
+        }
+    }
+
+    let arrayFirst = [];
+    for (let i = 0; i < 10; i++) {
+        arrayFirst[i] = parseInt(prompt("Input number: "));
+    }
+    reverse(arrayFirst)
+    document.write("Array is: " + arrayFirst);
+
+</script>
+</body>
+</html>

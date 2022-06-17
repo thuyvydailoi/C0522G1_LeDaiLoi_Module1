@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function change(str, array) {
+        let count = 0;
+        for (let i =0; i < array.length; i++) {
+            if (str===array[i]){
+                count++;
+            }
+        }
+        if(count ===0){
+            return "-1";
+        }
+        else {
+            return count;
+        }
+    }
+
+    let array = []
+    for (let i = 0; i < 10; i++) {
+        array[i] = (prompt("Input character: "));
+    }
+    let str = prompt("Input character: ");
+    let result = change(str, array);
+    document.write(" The appper is: " + result)
+
+</script>
+</body>
+</html>

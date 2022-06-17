@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function convert(array) {
+        let temp = array[0];
+        array[0] = array[1];
+        array[1] = temp;
+        return array;
+    }
+
+    let numberA = +prompt("Input number: ");
+    let numberB = +prompt("Input number: ");
+    let array = [numberA, numberB];
+    convert(numberA,numberB);
+    document.write("Array is: " + (array) + "<br>");
+    document.write("Array after change is: " + convert(array));
+</script>
+</body>
+</html>

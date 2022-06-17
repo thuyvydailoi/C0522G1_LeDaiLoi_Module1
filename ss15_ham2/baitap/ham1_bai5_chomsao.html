@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findStar() {
+        let index = 0;
+        for (let i = 0; i < arrayA.length; i++) {
+            if (star === arrayA[i]) {
+                document.write(arrayA[i] + "is son of" +" "+ arrayB[i]);
+                index++;
+            }
+        }
+        if (index === 0) {
+            document.write("Not found mother of star!!!");
+        }
+    }
+
+    let arrayA = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arrayB = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let star = prompt("Input star : ")
+    findStar(star);
+</script>
+</body>
+</html>

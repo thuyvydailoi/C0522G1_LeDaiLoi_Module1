@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(string) {
+        if (parseFloat(string) % parseFloat(string) === 0 || parseFloat(string) === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let string = prompt("Input character: ");
+    let result = check(string);
+    document.write("This is: " + result);
+</script>
+</body>
+</html>

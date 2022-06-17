@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkMin() {
+        if (numberA <= numberB && numberA <= numberC) {
+            return numberA;
+        } else if(numberB <= numberC) {
+            return  numberB;
+            }
+        else{
+            return numberC;
+        }
+    }
+
+    let numberA = parseInt(prompt("Input number A: "));
+    let numberB = parseInt(prompt("Input number B: "));
+    let numberC = parseInt(prompt("Input number C: "));
+    let result = checkMin(numberA,numberB,numberC);
+    document.write("Min is: " + result);
+</script>
+</body>
+</html>

@@ -11,17 +11,17 @@
 <p id="result"></p>
 <script>
     function trans() {
-        let arr_vie = ["anh ấy", "cô ấy", "con trai", "con gái", "bố", "mẹ"];
-        let arr_eng = ["he", "she", "son", "daughter", "daddy", "mom"];
+        let arrVie = ["anh ấy", "cô ấy", "con trai", "con gái", "bố", "mẹ"];
+        let arrEng = ["he", "she", "son", "daughter", "daddy", "mom"];
         let string = document.getElementById("str").value;
-        let index_eng = 0;
+        let indexEng = 0;
         let result = "";
-        for (let i = 0; i < arr_eng.length; i++) {
-            if (string === arr_eng[i]) {
-                index_eng = i;
-                for (let j = 0; j < arr_vie.length; j++) {
-                    if (index_eng === j) {
-                        result = arr_vie[j];
+        for (let i = 0; i < arrEng.length; i++) {
+            if (string === arrEng[i]) {
+                indexEng = i;
+                for (let j = 0; j < arrVie.length; j++) {
+                    if (indexEng === j) {
+                        result = arrVie[j];
                     }
                 }
             }
