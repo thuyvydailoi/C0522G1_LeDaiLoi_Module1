@@ -1,2 +1,0 @@
-let inputWidth;
-let inputHeight;

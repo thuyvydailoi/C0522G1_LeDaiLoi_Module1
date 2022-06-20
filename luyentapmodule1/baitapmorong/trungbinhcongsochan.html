@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function evenNumber(array) {
+        let sum = 0;
+        let average = 0;
+        for (let j = 0; j < array.length; j += 2) {
+            if (j % 2 === 0) {
+                sum += j;
+                average = sum / (j - 2)
+                document.write("Average is: " + average);
+            }
+        }
+    }
+
+    let size;
+    do {
+        size = +prompt("Input length of array: ");
+    } while (size > 50);
+    let arrayNumber = [];
+    for (let i = 0; i < size; i++) {
+        arrayNumber[i] = +prompt("Input number: ");
+    }
+    document.write("Array is: " + arrayNumber + "<bn>");
+    evenNumber(arrayNumber);
+</script>
+</body>
+</html>

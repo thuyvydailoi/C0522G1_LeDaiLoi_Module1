@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function count_element_in_array(array, x) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === x) {
+                count++;
+            }
+        }
+        document.write("Phan tu " + x + " xuat hien : " + count + " lan" + "<br>");
+    }
+
+    let array = [5, 4, 4, 5, 2, 1, 2];
+
+    count_element_in_array(array, 5);
+    count_element_in_array(array, 4);
+    count_element_in_array(array, 2);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>-->
+<!--    function notPrime() {-->
+<!--        let count = 0;-->
+<!--        for (let i = 0; i <= number; i++) {-->
+<!--            if (number % i === 0) {-->
+<!--                count++;-->
+<!--            }-->
+<!--        }-->
+<!--        if (count !== 2) {-->
+<!--            return "This is not a prime number!!";-->
+<!--        } else {-->
+<!--            return "This is not a prime number!!";-->
+<!--        }-->
+<!--    }-->
+
+<!--    let number = parseInt(prompt("Input number: "));-->
+<!--    let result = notPrime(number)-->
+<!--    document.write("Kết quả là: " + result);-->
+
+
+<!--    <script>-->
+<script>
+    function notPrime(a) {
+        let result = 0 + "<br>";
+        for (let i = 1; i <= a; i++) {
+            let divisor = 0;
+            for (let j = 1; j <= i; j++) {
+                if (i % j === 0) {
+                    divisor++;
+                }
+            }
+            if (divisor !== 2) {
+                result += i + "<br>";
+            }
+        }
+        return result;
+    }
+
+    let number = parseInt(prompt("Input number: "));
+    document.write(notPrime(number));
+</script>
+</body>
+</html>

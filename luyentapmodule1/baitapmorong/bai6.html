@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function compareArray(array1, array2) {
+        let array3 = [array2[0]];
+        for (let i = 0; i < array1.length; i++) {
+            if (array2[0] === array1[i]) {
+                for (let j = 1; j < array2.length; j++) {
+
+                    if (array2[j] === array1[i + 1]) {
+                        array3.push(array2[j]);
+                        i++;
+                    }
+                }
+                if (array3.length === array2.length) {
+                    return true;
+                } else {
+                    array3 = [array2[0]];
+                }
+            }
+        }
+        if (array3 !== array2.length) {
+            return false;
+        }
+    }
+
+    let arrayA = [];
+    let sizeA = +prompt("Input the length of the array 1: ");
+    for (let i = 0; i < sizeA; i++) {
+        arrayA[i] = +prompt("Input number 1: ");
+    }
+    let arrayB = [];
+    let sizeB = +prompt("Input the length of the array 2: ");
+    for (let j = 0; j < sizeB; j++) {
+        arrayB[j] = +prompt("Input number 2: ");
+    }
+    let result = compareArray(arrayA, arrayB);
+    document.write("Array 1 is: " + arrayA + "<br>");
+    document.write("Array 2 is: " + arrayB + "<br>");
+    document.write("This is: " + result)
+</script>
+</body>
+</html>

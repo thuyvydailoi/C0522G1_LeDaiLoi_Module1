@@ -8,22 +8,21 @@
 <script>
     function change(str, array) {
         let count = 0;
-        for (let i =0; i < array.length; i++) {
-            if (str===array[i]){
+        for (let i = 0; i < array.length; i++) {
+            if (str === array[i]) {
                 count++;
             }
         }
-        if(count ===0){
+        if (count === 0) {
             return "-1";
-        }
-        else {
+        } else {
             return count;
         }
     }
 
     let array = []
     for (let i = 0; i < 10; i++) {
-        array[i] = (prompt("Input character: "));
+        array[i] = +prompt("Input character: ");
     }
     let str = prompt("Input character: ");
     let result = change(str, array);

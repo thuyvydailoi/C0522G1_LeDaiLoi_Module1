@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        setHeight(height) {
+            this.height = height;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        getArea() {
+            return height * width;
+        }
+
+        getPerimeter() {
+            return (height * width) * 2;
+        }
+    }
+
+    let myRectangle = new Rectangle(70, 40);
+    let height = myRectangle.getHeight();
+    let width = myRectangle.getWidth();
+    myRectangle.setHeight(40);
+    myRectangle.setWidth(150);
+    document.write("Area of rectangle is: " + myRectangle.getArea() + "<br>");
+    document.write("Perimeter of rectangle is: " + myRectangle.getPerimeter() + "<br>");
+</script>
+<canvas id="retangle" style="background-color: antiquewhite" width="150" height="40"></canvas>
+</body>
+</html>

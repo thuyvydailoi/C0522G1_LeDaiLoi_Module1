@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function outputArray(n, array) {
+        if (n % 2 !== 0) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 === 0) {
+                    array[i] += 1;
+                } else if (n === array[i]) {
+                    array[i] = -1;
+                }
+            }
+            return array;
+        } else {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 !== 0) {
+                    array[i] += 1;
+                } else if (n === array[i]) {
+                    array[i] = -1;
+                }
+            }
+        }
+        return array;
+    }
+
+    let size = +prompt("Nhập vào độ dài của mảng: ");
+    let arrayNumber = [];
+    for (let i = 0; i < size; i++) {
+        arrayNumber[i] = +prompt("Nhập vào số: ");
+    }
+    let inputNumber = +prompt("Nhập vào 1 số bất ki: ");
+    let result = outputArray(inputNumber, arrayNumber);
+    document.write(result);
+</script>
+</body>
+</html>
