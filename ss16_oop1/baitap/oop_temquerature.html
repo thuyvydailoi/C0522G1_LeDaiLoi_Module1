@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    class Temquerature
+    class Temperature
     {
         constructor(celsius){
             this.celsius=celsius;
@@ -28,11 +28,11 @@
             return this.celsius+273.15;
         }
     }
-    let myTemquerature = new Temquerature(0);
-    myTemquerature.setCelsius(25);
-    document.write("Fahrenhiet is: "+ myTemquerature.getFahrenhiet()+"<br>");
-    document.write("Kelvins is: "+ myTemquerature.getKelvins()+"<br>");
-    document.write("Celsius is: "+ myTemquerature.getCelsius());
+    let myTemperature = new Temperature(0);
+    myTemperature.setCelsius(25);
+    document.write("Fahrenhiet is: "+ myTemperature.getFahrenhiet()+"<br>");
+    document.write("Kelvins is: "+ myTemperature.getKelvins()+"<br>");
+    document.write("Celsius is: " + myTemperature.getCelsius());
 
 </script>
 </body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        };
+
+        isEmpty() {
+            if (this.weight === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.isEmpty()) {
+                alert("No more Apples!!!");
+            } else {
+                this.weight--;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isMale() {
+            if (this.gender === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getGender() {
+            if (this.isMale()) {
+                return "Is Male";
+            } else {
+                return "Is Female";
+            }
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        say(string) {
+            document.write(string);
+        }
+
+        checkApple(apple) {
+            return apple.isEmpty();
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.decreaseApple();
+                this.weight++;
+            } else {
+                alert("No more Apples!!!!");
+            }
+        }
+
+        getInfo(human) {
+            document.write(human.name + " " + human.weight + " " + human.getGender() + "<br>");
+        }
+
+        goToilet() {
+            this.weight -= Math.floor(Math.random() * 5) + 1;
+        }
+    }
+
+    let adam = new Human("Adam", 1, 70);
+    let eva = new Human("Eva", 0, 50);
+    adam.getInfo(adam);
+    adam.say('I am Adam' + "<br>");
+    eva.getInfo(eva);
+    eva.say('I am Eva' + "<br>");
+    let apple = new Apple(10);
+    while (apple.isEmpty() !== true) {
+        document.write("Adam eat apple" + "<br>");
+        adam.eat(apple);
+        document.write("Remaining apple: " + "<br>");
+        document.write(apple.getWeight() + " unit" + "<br>");
+        document.write("Adam's weight is: " + adam.getWeight() + " " + "unit" + "<br>");
+        document.write("<br>")
+        document.write("Eva eat apple" + "<br>");
+        eva.eat(apple);
+        document.write("Remaining apple: " + "<br>");
+        document.write(apple.getWeight() + " unit" + "<br>");
+        document.write("Eva's weight is: " + eva.getWeight() + " " + "unit" + "<br>");
+        document.write("<br>")
+    }
+    document.write("Adam goes to the toilet" + "<br>");
+    adam.goToilet();
+    document.write("Adam's remaining weight is: " + adam.getWeight() + " " + "unit" + "<br>");
+    document.write("After, Adam goes to the toilet" + "<br>");
+    eva.goToilet();
+    document.write("Eva's remaining weight is: " + eva.getWeight() + " " + "unit" + "<br>");
+</script>
+</body>
+</html>
