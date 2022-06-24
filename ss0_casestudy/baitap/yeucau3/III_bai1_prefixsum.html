@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = parseInt(prompt("Input length array: "));
+    let arrayA = [];
+    let arrayB = [];
+    for (let i = 0; i < input; i++) {
+        arrayA[i] = parseInt(prompt("Input number: "));
+    }
+    let sum = 0;
+    for (let j = 0; j < input; j++) {
+        sum += arrayA[j];
+        arrayB[j] = sum;
+    }
+    document.write("Result is: " + arrayB);
+</script>
+</body>
+</html>

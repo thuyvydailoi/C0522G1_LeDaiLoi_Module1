@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let number = parseInt(prompt("Input number: "));
+    // let rank1 = number <= 1;
+    // let rank2 = number <= 2;
+    // let rank3 = number <= 3;
+    // let rank4 = number <= 4;
+    // let rank5 = number <= 5;
+    // let rank6 = number <= 6;
+    // let rank7 = number <= 7;
+    // let rank8 = number <= 8;
+    // let rank9 = number <= 9;
+    // let rank10 = number <= 10;
+    // switch (true) {
+    //     case rank1:
+    //         document.write("Số một");
+    //         break;
+    //     case rank2:
+    //         document.write("Số hai");
+    //         break;
+    //     case rank3:
+    //         document.write("Số ba");
+    //         break;
+    //     case rank4:
+    //         document.write("Số bốn");
+    //         break;
+    //     case rank5:
+    //         document.write("Số năm");
+    //         break;
+    //     case rank6:
+    //         document.write("Số sáu");
+    //         break;
+    //     case rank7:
+    //         document.write("Số bảy");
+    //         break;
+    //     case rank8:
+    //         document.write("Số tám");
+    //         break;
+    //     case rank9:
+    //         document.write("Số chín");
+    //         break;
+    //     case rank10:
+    //         document.write("Số mười");
+    //         break;
+    //     default:
+    //         alert("Input again!!!");
+    // }
+    let array1 = ["0","1", "2", "3","4","5","6","7","8","9"];
+    let array2 = ["Không","Một", "Hai", "Ba","Bốn","Năm","Sáu","Bảy","Tám","Chín"];
+    let string = prompt("Input");
+    array3 = string.split("");
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array3.length; j++) {
+            if (array1[i] === array3[j]) {
+                document.write(" "+array2[j] + " ");
+            }
+        }
+    }
+</script>
+</body>
+</html>

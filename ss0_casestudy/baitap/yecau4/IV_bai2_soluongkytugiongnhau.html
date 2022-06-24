@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+<!--    let inputA = prompt("Input string: ");-->
+<!--    let inputB = prompt("Input string: ");-->
+<!--    let array = [];-->
+<!--    let index = 0;-->
+<!--    for (let i = 0; i < inputA.length; i++) {-->
+<!--        for (let j = 0; j < inputB.length; j++) {-->
+<!--            if (inputA[i] === inputB[j]) {-->
+<!--                index++;-->
+<!--                array.push(inputA[i]);-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--    document.write("String 1 and 2 have: " + count + "and the same character is: " + array)-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputA = prompt("Input the first string: ");
+    let inputB = prompt("Input the second string: ");
+    let array = [];
+    let index = 0;
+
+    for (let i = 0; i < inputA.length; i++) {
+        for (let j = 0; j < inputB.length; j++) {
+            if (inputA[i] === inputB[j]) {
+                index++;
+                array.push(inputA[i])
+            }
+        }
+    }
+    document.write("String first and second have: " + index + "<br>");
+    document.write("The same character is: " + array);
+</script>
+</body>
+</html>

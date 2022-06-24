@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Input row: "));
+    let col;
+    let arrayB = [];
+    for (let i = 0; i < row; i++) {
+        col = parseInt(prompt("Input col: "));
+        let array = [];
+        for (let j = 0; j < col; j++) {
+            array[j] = parseInt(prompt("Input element of matrix[" + i + "][" + j + "] "))
+        }
+        arrayB[i] = array;
+    }
+
+    function isMinNumber(array) {
+        let min = array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+            }
+        }
+        return min;
+    }
+
+    function isMaxNumber(array) {
+        let max = array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+            }
+        }
+        return max;
+    }
+    isMinNumber(arrayB);
+    document.write("Min is: "+ isMinNumber(arrayB)+"<br>");
+    isMaxNumber(arrayB);
+    document.write("Max is: "+isMaxNumber(arrayB));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Input anything");
+    let array = [];
+    for (let i = 0; i < input.length; i++) {
+        let count = 0;
+        for (let j = 0; j < array.length; j++) {
+            if (input[i] === array[j]) {
+                count++;
+
+            }
+        }
+        if (count === 0) {
+            array.push(input[i]);
+        }
+    }
+    document.write("The input you just type: " + input + "<br>");
+    document.write("The different part is:  " + array + "<br>" + " Total is:   " + array.length);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(string) {
+        let arrayString = [];
+        let arrayCount = [];
+        let arrayStringB = "";
+        let count = 0;
+        let max = count;
+        for (let i=0; i<string.length; i++) {
+            if (string[i] !== " ") {
+                if (string[i-1] === " " || string[i-1] === undefined) {
+                    arrayStringB += string[i].toUpperCase();
+                }
+                else {
+                    arrayStringB += string[i].toLowerCase();
+                }
+                count++;
+                if (string[i+1] === " " || string[i+1] === undefined) {
+                    arrayString.push(arrayStringB);
+                    arrayCount.push(count);
+                    if (count>max) {
+                        max = count;
+                    }
+                    arrayStringB = "";
+                    count = 0;
+                }
+            }
+        }
+        document.write("Before: " + string + "<br>");
+        document.write("After: " + arrayString.join(" ") + "<br>");
+        let array = [];
+        for (let i=0; i<arrayCount.length; i++) {
+            if (arrayCount[i]===max) {
+                array.push(arrayString[i]);
+            }
+        }
+        document.write("most long string: " + array + " (" + max + " kí tự)" + "<br>");
+    }
+    let string = prompt("Input string: ");
+    checkString(string);
+</script>
+</body>
+</html>

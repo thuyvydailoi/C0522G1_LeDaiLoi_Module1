@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputA = parseInt(prompt("Input length array: "));
+    let arrayA = [];
+    for (let i = 0; i < inputA; i++) {
+        arrayA[i] = parseInt(prompt("Input number:"));
+    }
+    let inputB = parseInt(prompt("Input length array: "));
+    let arrayB = [];
+    for (let j = 0; j < inputB; j++) {
+        arrayB[j] = parseInt(prompt("Input number:"));
+    }
+    let arrayC = [];
+    for (let i = 0; i < arrayB.length; i++) {
+        let count = 0;
+        for (let j = 0; j < arrayA.length; j++) {
+            if (arrayB[i] === arrayA[j]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            arrayC.push(arrayB[i]);
+            arrayC.push(i)
+        }
+    }
+    // document.write("Result is: " + arrayC);// Tim so phan tu co o B ma khong co o A!!
+    let arrayD = [];
+    arrayD[0] = arrayC[0];
+    for (let i = 0; i < arrayC.length; i += 2) {
+        if (arrayC[i] < arrayC[i + 2] && arrayC[i + 1] + 1 === arrayC[i + 3]) {
+            arrayD.push(arrayC[i + 2]);
+        } else if (arrayD.length > 1) {
+            document.write("Result: " + arrayD);
+            break;
+        } else {
+            arrayD[0] = arrayC[i + 2];
+        }
+    }
+    if (arrayD.length === 1) {
+        document.write("Not found");
+    }
+</script>
+</body>
+</html>

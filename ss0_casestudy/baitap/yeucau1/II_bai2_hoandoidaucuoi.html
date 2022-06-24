@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Cho một mảng số nguyên Hãy kiểm tra xem tần số xuất hiện của tất cả các số nguyên trong mảng có bằng nhau hay không
+    // Ví dụ:
+    //     Với inputArray = [1, 2, 2, 1], thì kết quả checkEqualFrequency(inputArray) = true
+    // Số 1 và số 2 đều có tần số xuất hiện là 2
+    // Với inputArray = [1, 2, 2, 3, 1, 3, 1, 3], thì kết quả checkEqualFrequency(inputArray) = false.
+    //     Số 1 có tần số xuất hiện là 3, khác vs số 2 và số 3 có tần số xuất hiện là 2 .
+    function solution(arg1) {
+        let newArray = [arg1[0]];
+        for (let i = 0; i < arg1.length; i++) {
+            let index = 0;
+            for (let j = 0; j < newArray.length; j++) {
+                if (arg1[i] === newArray[j]) {
+                    index++;
+                }
+            }
+            if (index === 0) {
+                newArray.push(arg1[i]);
+            }
+        }
+        let arrayCount = [];
+        for (let i = 0; i < newArray.length; i++) {
+            let count = 0;
+            for (let j = 0; j < arg1.length; j++) {
+                if (arg1[j] === newArray[i]) {
+                    count++;
+                }
+            }
+            arrayCount.push(count);
+        }
+        let x = 0;
+        for (let i = 1; i < arrayCount.length; i++) {
+            if (arrayCount[0] === arrayCount[i]) {
+                x++;
+            }
+        }
+        if (x === arrayCount.length - 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let inputArray = [1, 2, 2, 3, 1, 3, 1, 3, 2];
+    document.write("This is: " + solution(inputArray));
+</script>
+</body>
+</html>

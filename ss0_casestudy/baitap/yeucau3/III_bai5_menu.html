@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let menu=["Cafe","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lon","Nước dừa","Exit"];
+    let price=[28000,42000,35000,32000,25000,37000];
+    let sum = 0;
+    let number;
+    let choose;
+    let count = 0;
+    do {
+        alert("MENU\n1. Cafe\n2. Cam vắt\n3. Nước ép cà rốt\n4. Nước ép cà chua\n5. Nước lọc\n6. Nước dừa\n7. Thoát gọi món!")
+        choose = parseInt(prompt("Vui lòng chọn món: "));
+        if (choose!==7) {
+            for (let i = 0; i < menu.length; i++) {
+                if (i === choose - 1) {
+                    alert(menu[i] + ": " + price[i] + "(VND)");
+                    number = parseInt(prompt("Vui lòng nhập số lượng: "));
+                    alert(menu[i] + " x " + number + " = " + price[i] * number + " (VND)");
+                    count++;
+                    document.write("Order lần " + count + ": " + menu[i] + " x " + number + " = " + price[i] * number + "(VND)" + "<br>");
+                    sum += price[i] * number;
+                }
+            }
+            alert("Vui lòng nhập lại để chọn món!");
+        }
+        else {
+            alert("CÁM ƠN QUÝ KHÁCH!");
+        }
+    } while (choose!==7);
+    document.write("<b>" + "Tổng cộng: " + sum + " (VND)");
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Input row: "));
+    let col;
+    let arrayB = [];
+
+    for (let i = 0; i < row; i++) {
+        col = parseInt(prompt("Input col: "));
+        document.write("[");
+        let array = [];
+        for (let j = 0; j < col; j++) {
+            array[j] = parseInt(prompt("Input element of matrix[" + i + "][" + j + "] "));
+            document.write(array[j] + "<br>");
+        }
+        document.write("]")
+        arrayB[i] = array;
+    }
+
+    function isPrime(array) {
+        let arrayPrime = [];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                let index = 0;
+                for (let k = 1; k <= array[i][j]; k++) {
+                    if (array[i][j] % k === 0) {
+                        index++;
+                    }
+                }
+                if (index === 2) {
+                    arrayPrime.push(array[i][j]);
+                }
+            }
+        }
+        return arrayPrime;
+    }
+
+    document.write("cac so nguyen to:" + isPrime(arrayB) + "<br>");
+    document.write("so lan xuat hien: " + isPrime(arrayB).length);
+</script>
+</body>
+</html>

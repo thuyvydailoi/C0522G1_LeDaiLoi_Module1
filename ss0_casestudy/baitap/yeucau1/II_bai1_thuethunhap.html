@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let income = parseFloat(prompt("Input income: "));
+    let rank0 = income < 0
+    let rank1 = income <= 7000000;
+    let rank2 = income < 15000000 && income > 7000000;
+    switch (true) {
+        case rank0:
+            alert("Input again ! ");
+            break;
+        case rank1:
+            document.write("Personal income tax is: " + income * 0.05 + "VNĐ" + "<br>");
+            document.write("Net salary: " + (income - (income * 0.05))  + "VNĐ");
+            break;
+        case rank2:
+            document.write("Personal income tax is: " + income * 0.1 + "VNĐ" + "<br>");
+            document.write("Net salary: " + (income - (income * 0.1)) + "VNĐ");
+            break;
+        default:
+            document.write("Personal income tax is: " + income * 0.2 + "VNĐ" + "<br>");
+            document.write("Net salary: " + (income - (income * 0.2) + "VNĐ"));
+
+    }
+</script>
+</body>
+</html>

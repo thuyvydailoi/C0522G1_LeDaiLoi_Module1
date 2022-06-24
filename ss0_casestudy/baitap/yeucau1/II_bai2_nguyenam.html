@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Input Text: ");
+    let arr = ['o', 'u', 'i', 'a', 'e'];
+    let index =0;
+    for (let i = 0; i < arr.length; i++) {
+        if (str.toLowerCase() === arr[i]) {
+            index++;
+        }
+    }
+    if(index===0){
+        document.write(str +" "+ "Is not vowel!");
+    } else{
+        document.write(str +" "+ "Is vowel!");
+    }
+</script>
+</body>
+</html>
