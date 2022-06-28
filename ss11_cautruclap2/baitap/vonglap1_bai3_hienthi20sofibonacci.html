@@ -5,18 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<!--Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
 <script>
     let seed1 = 0;
     let seed2 = 1;
     let seed3;
-    let strseed = 1;
+    let str = seed1 + ", " + seed2;
+
     for (let i = 1; i <= 18; i++) {
         seed3 = seed1 + seed2;
-        strseed += seed3;
+        str += ", " + seed3;
         seed1 = seed2;
         seed2 = seed3;
     }
-    document.write("Tổng 20 số đầu tiên trong dãy fibonacci là :" + strseed);
+    document.write(str);
+
 </script>
 </body>
 </html>

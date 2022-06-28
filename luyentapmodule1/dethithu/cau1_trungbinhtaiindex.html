@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input;
+    do {
+        input = parseInt(prompt("Input length of array: "));
+    } while (!(input % 1 === 0 && input > 0 && input <= 50))
+    let arrNumber = [];
+    for (let i = 0; i < input; i++) {
+        arrNumber[i] = parseInt(prompt("Input number in array: "));
+    }
+    document.write("array is: " + arrNumber + "<br>");
+
+    let index = 0;
+    let sum = 0;
+    for (let i = 0; i < input; i++) {
+        if (arrNumber[i] % 5 === 0 && i % 3 === 0) {
+            sum += arrNumber[i];
+            index++;
+        }
+    }
+    if (index === 0) {
+        document.write("not found")
+    }
+
+    document.write("Average is: " + sum / index);
+
+</script>
+</body>
+</html>

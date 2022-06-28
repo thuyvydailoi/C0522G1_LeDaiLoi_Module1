@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber = [];
+    let input = parseInt(prompt("Input lenght of array: "));
+    for (let i = 0; i < input; i++) {
+        arrayNumber[i] = parseInt(prompt("Input element of array: "));
+    }
+    document.write("Array is =[" + arrayNumber + "]" + "<br>");
+
+    function findFibonaci(array) {
+        array.sort(function (a, b) {
+            return a - b;
+        }) //sap xep tang dan
+
+        let newArray = [0, 1];
+        let seed1 = 0;
+        let seed2 = 1;
+        let seed3 = 1;
+        while (seed3 <= array[array.length - 1]) {
+            newArray.push(seed3);
+            seed1 = seed2;
+            seed2 = seed3;
+            seed3 = seed1 + seed2;
+        }
+        let newArrayB = [];
+        for (let i = 0; i < array.length; i++) {
+            if (newArray.includes(array[i])) {
+                newArrayB.push(array[i]);
+            }
+        }
+        return newArrayB;
+    }
+
+    document.write("This is =[" + findFibonaci(arrayNumber) + "]");
+</script>
+</body>
+</html>

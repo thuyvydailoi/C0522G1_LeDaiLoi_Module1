@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let character;
+    do {
+        character = prompt("Input character: ");
+    } while (character % character === 0)
+
+    let key = character.trim(); // xoa cac dau cach thua
+    let array = key.split("");// chuyen chuoi thanh mang
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === " " && array[i - 1] === " ") {
+            array.splice(i, 1);
+        }
+    }
+
+
+    function acronym(arr) {
+        if (arr.includes(" ") === true) {
+            let newArray = [];
+            newArray[0] = arr[0].toUpperCase();
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] !== " " && arr[i - 1] === " ") {
+                    arr[i] = arr[i].toUpperCase();
+                    newArray.push(arr[i]);
+                }
+            }
+            return newArray.join("");
+        } else {
+            alert("Only 1 candlestick not write!!!");
+        }
+    }
+
+    document.write("This is: " + acronym(array))
+</script>
+</body>
+</html>

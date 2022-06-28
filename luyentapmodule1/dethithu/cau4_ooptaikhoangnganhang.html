@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<Script>
+    class checkAccount {
+        constructor(Code, name, bankName, money) {
+            this.code = Code;
+            this.name = name;
+            this.bankName = bankName;
+            this.money = money;
+
+        }
+        setCode(newCode){
+            this.code=newCode ;
+        }
+        setName(newName){
+            this.name=newName;
+        }
+        setbackName(newBackName){
+            this.bankName=newBackName;
+        }
+        setMoney(newMoney){
+            this.money=newMoney;
+        }
+        getCode(){
+            return this.code;
+        }
+        getName(){
+            return this.name;
+        }
+        getBackName(){
+            return this.bankName;
+        }
+        getMoney(){
+            return this.money;
+        }
+        toString(){
+            return ("Id: "+this.getCode()+" "+"Tên Tk: "+this.getName()+"/"+this.getBackName()+"/"+this.getMoney());
+
+        }
+    }
+    let bankAccount=new checkAccount("123456","VoVanTy","147258369",200000000)
+    document.write(bankAccount.toString()+"<br>")
+    bankAccount.setCode("1473")
+    bankAccount.setName("namhuynhnangcuc")
+    bankAccount.setbackName("23654")
+    bankAccount.setMoney(120000)
+    document.write(bankAccount.toString()+"<br>")
+</Script>
+</body>
+</html>

@@ -8,14 +8,14 @@
 <script>
     let height = parseInt(prompt("Nhập chiều cao tam giác cân: "));
     let triangle = "<table>";
-    for (let i=1; i<=height; i++) {
+    for (let i = 1; i <= height; i++) {
         triangle += "<tr>";
-        for (let j=1; j<=i; j++) {
-            if(j===1||i===height||j===i) {
+        for (let j = 1; j <= 2 * height - 1; j++) {
+            if (j === height - 1 + i || j === height + 1 - i || i === height) {
                 triangle += "<td>" + "*" + "</td>";
-            }
-            else{
-                triangle += "<td>"+"</td>";
+            } else {
+                triangle += "<td>" + "</td>";
+
             }
         }
         triangle += "</tr>";
